@@ -3,7 +3,7 @@ async function getData(selected_major){
 	var response = await fetch('cit5students.json');
 
 	if(response.ok){
-		var response = await response.json();
+		var data = await response.json();
 		
 		//Filter data for user input major
 		major_items = data.filter((item) => item.major == selected_major);
