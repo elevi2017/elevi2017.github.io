@@ -8,7 +8,7 @@ async function getData(selected_major){
 		//Filter data for user input major
 		major_items = data.filter((item) => item.major == selected_major);
 		
-		var tempTxt = document.getelementbyID('majorTemplate').innerHTML;
+		var tempTxt = document.getElementbyId('majorTemplate').innerHTML;
 		var compileTempTxt = Handlebars.compile(tempTxt);
 		
 		compiledHtml = compileTempTxt({rows: major_items})
