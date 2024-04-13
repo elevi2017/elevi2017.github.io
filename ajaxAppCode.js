@@ -6,7 +6,7 @@ async function getData(selected_major){
 		var data = await response.json();
 		
 		//Filter data for user input major
-		cit5students = data.filter((name) => name.major == selected_major);
+		cit5students = data.filter((student) => student.major == selected_major);
 		
 		var tempTxt = document.getElementById('majorTemplate').innerHTML;
 		var compileTempTxt = Handlebars.compile(tempTxt);
