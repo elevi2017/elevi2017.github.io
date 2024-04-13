@@ -9,7 +9,7 @@ async function getData(selected_major){
 		cit5students = data.filter((student) => student.major == selected_major);
 		
 		var tempTxt = document.getElementById('majorTemplate').innerHTML;
-		var compileTempTxt = Handlebars.compile(tempTxt);
+		var compiledTempTxt = Handlebars.compile(tempTxt);
 		
 		compiledHtml = compiledTempTxt({rows: cit5students})
 		document.getElementById('majorTable').innerHTML = compiledHtml;
