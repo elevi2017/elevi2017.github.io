@@ -11,7 +11,7 @@ async function getData(selected_major){
 		var tempTxt = document.getElementbyId('majorTemplate').innerHTML;
 		var compileTempTxt = Handlebars.compile(tempTxt);
 		
-		compiledHtml = compileTempTxt({rows: major_items})
+		compiledHtml = compiledTempTxt({rows: major_items})
 		document.getElementById('majorTable').innerHTML = compiledHtml;
 	}
 	
