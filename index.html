@@ -45,14 +45,14 @@
               </tr>
          </table>
   
-</div>   <!-- end gpaApp -->
+</div>   <!-- end ticketApp -->
 </div>   <!-- end class= 'container' -->
 
 <script>
        let app = Vue.createApp({
             data() {     // returns an object of data
                 return {
-                    tickets: [],           // array to hold student data
+                    tickets: [],           // array to hold ticket data
                 }
             },
             created() {      // section executes as page loads
@@ -61,8 +61,7 @@
             methods: {    // ajax request
                 async getData() {
                     const response = await fetch('tickets1.json')
-                    this.tickets = await response.json()
-                    //tickets = data.filter( (item) => item.major == majSelect );     
+                    this.tickets = await response.json()    
                 },
             }
           })
