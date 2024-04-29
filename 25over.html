@@ -52,7 +52,6 @@
        let app = Vue.createApp({
             data() {     // returns an object of data
                 return {
-			results: [], 
                     	tickets: [],    // array to hold tickets data
                 }
             },
@@ -69,12 +68,12 @@
                     this.results = await response.json() 
 					
                 },
-			},
+	    },
 			
-		computed:{
-			filteredTickets(){
+	   computed:{
+		filteredTickets(){
 				
-				return this.tickets = this.reults.filter(ticket => ticket.actual_speed - ticket.posted_speed >= 25);
+			return this.tickets = this.reults.filter(ticket => ticket.actual_speed - ticket.posted_speed >= 25);
 				
 			}
          	},
