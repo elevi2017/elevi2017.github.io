@@ -52,8 +52,8 @@
        let app = Vue.createApp({
             data() {     // returns an object of data
                 return {
-					results: [], 
-                    tickets: [],    // array to hold tickets data
+			results: [], 
+                    	tickets: [],    // array to hold tickets data
                 }
             },
 			
@@ -71,13 +71,13 @@
                 },
 			},
 			
-			computed:{
-				filteredTickets(){
+		computed:{
+			filteredTickets(){
 				
-					this.tickets = this.reults.filter(ticket => ticket.actual_speed - ticket.posted_speed >= 25);
-				}
+				this.tickets = this.reults.filter(ticket => ticket.actual_speed - ticket.posted_speed >= 25);
+				
 			}
-         },
+         	},
       })
       
       app.mount('#ticketApp')   //in which div to mount the vue app
