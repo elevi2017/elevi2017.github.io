@@ -70,7 +70,7 @@
                 },
 				ticketsOvr25(){
 				
-					this.tickets.filter(ticket => ticket.actual_speed - ticket.posted_speed >= 25);
+					return this.tickets.filter(ticket => ticket.actual_speed - ticket.posted_speed >= 25);
 				}
             }
           })
