@@ -68,14 +68,12 @@
                     this.tickets = await response.json() 
 					
                 },
-			},
-			
-			computed: {
-				filteredTickets() {
+		
+		filteredTickets() {
 	
-						this.tickets = this.tickets.filter(ticket => ticket.actual_speed - ticket.posted_speed >= 25);
+			this.tickets = this.tickets.filter(ticket => ticket.actual_speed - ticket.posted_speed >= 25);
 
-				},
+		}
          },
       })
       
